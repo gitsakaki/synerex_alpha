@@ -6,7 +6,8 @@ require (
 	github.com/synerex/synerex_alpha/api/common v0.0.0
 	github.com/synerex/synerex_alpha/api/ptransit v0.0.0
 	github.com/synerex/synerex_alpha/sxutil v0.0.0-20181116053009-a95f29211ec1
-	google.golang.org/grpc v1.16.0
+	golang.org/x/net v0.0.0-20190415214537-1da14a5a36f2 // indirect
+	google.golang.org/grpc v1.17.0
 )
 
 replace (

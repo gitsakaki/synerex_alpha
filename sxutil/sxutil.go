@@ -244,6 +244,11 @@ func (clt *SMServiceClient) ProposeSupply(spo *SupplyOpts) uint64 {
 			spo.RoutingService,
 		}
 		sp.ArgOneof = &spa
+	case api.ChannelType_AGV_SERVICE:											//P-S0001
+		spa := api.Supply_Arg_AgvService{										//P-S0001
+			spo.AgvService,														//P-S0001
+		}																		//P-S0001
+		sp.ArgOneof = &spa														//P-S0001
 	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
@@ -439,6 +444,11 @@ func (clt *SMServiceClient) RegisterDemand(dmo *DemandOpts) uint64 {
 		}else{
 			log.Printf("Rideshare info is nil")
 		}
+	case api.ChannelType_AGV_SERVICE:											//P-S0001
+		rsp := api.Demand_Arg_AgvService{										//P-S0001
+			dmo.AgvService, 													//P-S0001
+		}																		//P-S0001
+		dm.ArgOneof = &rsp														//P-S0001
 
 	}
 
@@ -491,6 +501,11 @@ func (clt *SMServiceClient) RegisterSupply(smo *SupplyOpts) uint64 {
 			smo.RoutingService,
 		}
 		dm.ArgOneof = &sp
+	case api.ChannelType_AGV_SERVICE:											//P-S0001
+		sp := api.Supply_Arg_AgvService{										//P-S0001
+			smo.AgvService, 													//P-S0001
+		}																		//P-S0001
+		dm.ArgOneof = &sp														//P-S0001
 	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)

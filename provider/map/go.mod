@@ -11,9 +11,10 @@ require (
 	github.com/synerex/synerex_alpha/api/common v0.0.0
 	github.com/synerex/synerex_alpha/api/routing v0.0.0
 	github.com/synerex/synerex_alpha/sxutil v0.0.0
+	golang.org/x/net v0.0.0-20190415214537-1da14a5a36f2 // indirect
 
-	golang.org/x/sys v0.0.0-20181107165924-66b7b1311ac8
-	google.golang.org/grpc v1.16.0
+	golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a
+	google.golang.org/grpc v1.17.0
 )
 
 replace (
